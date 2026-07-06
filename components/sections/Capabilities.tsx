@@ -1,115 +1,127 @@
 export default function Capabilities() {
-  const capabilities = [
+  const steps = [
     {
-      title: "Energy Optimization",
-      status: "Commercially Validated",
+      number: "01",
+      title: "Observe",
+      subtitle: "Continuous Telemetry",
       description:
-        "Autonomously reduces Wi-Fi infrastructure energy consumption while maintaining exceptional user experience.",
-      bullets: [
-        "Dynamic power optimization",
-        "1.15 W reduction during inactive periods",
-        "Continuous autonomous adaptation",
-      ],
+        "Continuously senses infrastructure, devices, and environmental signals to establish real-time situational awareness.",
     },
     {
-      title: "Coverage Optimization",
-      status: "Platform Roadmap",
+      number: "02",
+      title: "Understand",
+      subtitle: "Context & Behavior Learning",
       description:
-        "Continuously adapts Wi-Fi coverage and RF behavior based on contextual awareness and network conditions.",
-      bullets: [
-        "Adaptive RF optimization",
-        "Coverage balancing",
-        "Enhanced user experience",
-      ],
+        "Transforms telemetry into contextual understanding by learning behavioral patterns, occupancy trends, and operational states.",
     },
     {
-      title: "Occupancy Intelligence",
-      status: "Platform Roadmap",
+      number: "03",
+      title: "Decide",
+      subtitle: "Ambient Intelligence Engine",
       description:
-        "Transforms infrastructure telemetry into occupancy awareness and behavioral intelligence without dedicated sensors.",
-      bullets: [
-        "Presence awareness",
-        "Behavioral insights",
-        "Context formation",
-      ],
+        "Evaluates learned context to determine the optimal action based on policies, objectives, and continuously evolving conditions.",
+    },
+    {
+      number: "04",
+      title: "Orchestrate",
+      subtitle: "Autonomous Coordination",
+      description:
+        "Coordinates infrastructure-wide actions across connected systems while maintaining service continuity and user experience.",
+    },
+    {
+      number: "05",
+      title: "Adapt",
+      subtitle: "Continuous Optimization",
+      description:
+        "Measures outcomes, learns from every decision, and continuously refines future behavior without manual intervention.",
     },
   ];
 
   return (
     <section
       id="capabilities"
-      className="relative overflow-hidden bg-[#05080D] py-32"
+      className="relative overflow-hidden bg-black py-32"
     >
-      {/* Ambient Glow */}
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.05),transparent_70%)]" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.04),transparent_70%)]" />
+      <div className="relative mx-auto max-w-7xl px-6">
 
-      <div className="relative mx-auto max-w-7xl px-8">
-        {/* Section Header */}
+        {/* Header */}
 
-        <div className="mx-auto mb-20 max-w-4xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
+
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Platform Capabilities
+            OPERATING MODEL
           </p>
 
-          <h2 className="text-5xl font-semibold tracking-tight text-white">
-            Intelligence That Delivers Value
+          <h2 className="text-5xl font-bold tracking-tight text-white md:text-6xl">
+            From Awareness to Autonomous Action
           </h2>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
-            Powered by a single Ambient Intelligence Platform, each capability
-            transforms continuous sensing into measurable operational outcomes.
+          <p className="mx-auto mt-8 max-w-3xl text-lg leading-9 text-slate-400">
+            Ambient Intelligence continuously observes, understands,
+            orchestrates, and adapts connected infrastructure—creating
+            intelligent environments that improve themselves over time.
           </p>
+
         </div>
 
-        {/* Capability Cards */}
+        {/* Timeline */}
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {capabilities.map((capability) => (
-            <div
-              key={capability.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-white/[0.05]"
-            >
-              <div className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-xs font-medium uppercase tracking-wider text-cyan-300">
-                {capability.status}
+        <div className="relative mx-auto mt-24 max-w-5xl">
+
+          {/* Vertical Line */}
+
+          <div className="absolute left-7 top-0 h-full w-px bg-gradient-to-b from-cyan-400/60 via-cyan-400/20 to-transparent" />
+
+          <div className="space-y-16">
+
+            {steps.map((step) => (
+              <div
+                key={step.number}
+                className="relative flex gap-8"
+              >
+
+                {/* Number */}
+
+                <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-cyan-400/40 bg-black">
+
+                  <span className="text-sm font-semibold text-cyan-400">
+                    {step.number}
+                  </span>
+
+                </div>
+
+                {/* Content */}
+
+                <div className="flex-1 rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.05]">
+
+                  <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+
+                    <h3 className="text-3xl font-semibold text-white">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-cyan-400">
+                      {step.subtitle}
+                    </p>
+
+                  </div>
+
+                  <p className="mt-5 max-w-3xl leading-8 text-slate-400">
+                    {step.description}
+                  </p>
+
+                </div>
+
               </div>
+            ))}
 
-              <h3 className="mt-6 text-3xl font-semibold text-white">
-                {capability.title}
-              </h3>
+          </div>
 
-              <p className="mt-5 leading-7 text-slate-400">
-                {capability.description}
-              </p>
-
-              <div className="mt-8 h-px bg-white/10" />
-
-              <ul className="mt-8 space-y-4">
-                {capability.bullets.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="flex items-start gap-3 text-slate-300"
-                  >
-                    <div className="mt-2 h-2 w-2 rounded-full bg-cyan-400" />
-
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
 
-        {/* Closing Statement */}
-
-        <div className="mx-auto mt-24 max-w-4xl text-center">
-          <p className="text-xl leading-9 text-slate-300">
-            One Ambient Intelligence Platform.
-            <br />
-            Continuously expanding capabilities across connected
-            infrastructure.
-          </p>
-        </div>
       </div>
     </section>
   );
