@@ -1,8 +1,8 @@
-import LivingNetwork from "@/components/animation/LivingNetwork";
+import AmbientIntelligence from "@/components/animation/AmbientIntelligence";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#04070C] pt-36 pb-28">
+    <section className="relative overflow-hidden bg-[#04070C] pt-40 pb-36">
       {/* Ambient Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_45%,rgba(0,217,255,0.16),transparent_45%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.05),transparent_40%)]" />
@@ -10,8 +10,9 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-20 px-8 lg:grid-cols-2">
         {/* LEFT */}
         <div>
-          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Reimagining Wi-Fi Infrastructure
+          <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400 leading-relaxed md:text-base">
+            <span className="block">AMBIENT INTELLIGENCE</span>
+            <span className="block">FOR CONNECTED ENVIRONMENTS</span>
           </p>
 
           <h1 className="max-w-xl text-6xl font-bold leading-[1.02] tracking-tight text-white">
@@ -21,9 +22,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-8 max-w-xl text-xl leading-9 text-slate-300">
-            Bringing Ambient Intelligence to Wi-Fi infrastructure—
-            enabling networks to sense, understand, orchestrate,
-            and adapt autonomously.
+            Bringing Ambient Intelligence to connected environments—
+            enabling infrastructure to sense, understand,
+            orchestrate, and adapt autonomously.
           </p>
 
           {/* Core Principles */}
@@ -77,15 +78,9 @@ export default function Hero() {
         {/* RIGHT */}
         <div className="relative flex items-center justify-center">
           {/* Ambient Glow */}
-          <div className="absolute h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute h-[34rem] w-[34rem] rounded-full bg-cyan-400/8 blur-[140px]" />
 
-          <LivingNetwork />
-
-          <div className="absolute -bottom-10 text-center">
-            <p className="text-sm uppercase tracking-[0.35em] text-slate-500">
-              Infrastructure that understands
-            </p>
-          </div>
+          <AmbientIntelligence />
         </div>
       </div>
     </section>
