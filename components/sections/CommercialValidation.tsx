@@ -1,24 +1,24 @@
 export default function CommercialValidation() {
   const validations = [
     {
-      title: "Commercially Validated",
+      title: "Real-World Validation",
       description:
-        "Energy Optimization has been successfully demonstrated on real Wi-Fi infrastructure, validating the Ambient Intelligence Platform in operational environments.",
+        "Successfully demonstrated on operational Wi-Fi infrastructure, validating the Ambient Intelligence Platform under real deployment conditions.",
     },
     {
       title: "Measurable Impact",
       description:
-        "Autonomous optimization identifies inactive operating periods and reduces infrastructure energy consumption while maintaining seamless user experience.",
+        "Autonomous optimization identifies inactive operating periods and reduces infrastructure energy consumption while maintaining a seamless user experience.",
     },
     {
-      title: "Platform Ready",
+      title: "Expandable Platform",
       description:
-        "The same Ambient Intelligence Platform is designed to expand into Coverage Optimization and Occupancy Intelligence without changing the underlying architecture.",
+        "Designed to extend beyond Energy Optimization into Coverage Optimization, Occupancy Intelligence, and future Ambient Intelligence applications without changing the underlying platform.",
     },
     {
       title: "Ready for Operator Deployment",
       description:
-        "Built for carrier-grade environments with a scalable architecture that supports large-scale infrastructure deployments.",
+        "Built for carrier-grade environments with a scalable architecture designed for deployment across large infrastructure fleets.",
     },
   ];
 
@@ -28,30 +28,28 @@ export default function CommercialValidation() {
       className="relative overflow-hidden bg-[#04070C] py-32"
     >
       {/* Ambient Glow */}
-
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.05),transparent_65%)]" />
 
       <div className="relative mx-auto max-w-7xl px-8">
         {/* Header */}
-
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Commercial Validation
+            Market Validation
           </p>
 
           <h2 className="text-5xl font-semibold tracking-tight text-white">
-            Proven Through Real-World Implementation
+            Validated in Real-World Environments
           </h2>
 
           <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-400">
-            Ambient Intelligence is more than a concept. Energy Optimization
-            demonstrates how continuous sensing and autonomous orchestration
-            translate into measurable operational value.
+            The Ambient Intelligence Platform has been validated through
+            real-world deployment, demonstrating measurable operational value
+            while establishing the foundation for future intelligent
+            applications.
           </p>
         </div>
 
         {/* Validation Grid */}
-
         <div className="grid gap-8 md:grid-cols-2">
           {validations.map((item) => (
             <div
@@ -72,12 +70,11 @@ export default function CommercialValidation() {
         </div>
 
         {/* Closing */}
-
         <div className="mx-auto mt-24 max-w-4xl text-center">
           <p className="text-xl leading-9 text-slate-300">
             One Ambient Intelligence Platform.
             <br />
-            Commercially validated today. Continuously expanding tomorrow.
+            Validated today. Built for the future of connected environments.
           </p>
         </div>
       </div>

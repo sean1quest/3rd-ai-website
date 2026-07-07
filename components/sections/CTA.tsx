@@ -8,11 +8,10 @@ export default function CTA() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.08),transparent_60%)]" />
 
       <div className="relative mx-auto max-w-5xl px-8 text-center">
-
         {/* Section Label */}
 
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-          The Future Starts Here
+          Let's Build the Future Together
         </p>
 
         {/* Headline */}
@@ -28,15 +27,14 @@ export default function CTA() {
         {/* Supporting Text */}
 
         <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-slate-400">
-          Discover how Ambient Intelligence transforms Wi-Fi infrastructure
-          into an adaptive platform that continuously senses, understands,
-          orchestrates, and acts autonomously.
+          Discover how the Ambient Intelligence Platform enables connected
+          environments to continuously sense, understand, orchestrate, and
+          adapt autonomously.
         </p>
 
         {/* CTA Buttons */}
 
         <div className="mt-16 flex flex-wrap justify-center gap-6">
-
           <a
             href="mailto:info@3rd-ai.com"
             className="rounded-full bg-cyan-400 px-10 py-4 text-lg font-semibold text-black transition-all duration-300 hover:scale-105"
@@ -50,11 +48,9 @@ export default function CTA() {
             rel="noopener noreferrer"
             className="rounded-full border border-white/15 px-10 py-4 text-lg text-white transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400"
           >
-            Follow Our Journey
+            Connect on LinkedIn
           </a>
-
         </div>
-
       </div>
     </section>
   );
