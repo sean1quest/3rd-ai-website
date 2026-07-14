@@ -1,16 +1,14 @@
 "use client";
 
-import { useState, FormEvent, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-function AuthForm() {
+export default function AuthPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const from = searchParams.get("from") ?? "/";
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -24,7 +22,7 @@ function AuthForm() {
     });
 
     if (res.ok) {
-      router.push(from);
+      router.push("/");
     } else {
       setError(true);
       setLoading(false);
@@ -32,52 +30,24 @@ function AuthForm() {
   };
 
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/[0.03] p-8">
-      <p className="mb-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
-        Private Access
-      </p>
-      <h1 className="mb-6 text-2xl font-semibold text-white">
-        Enter password to continue
-      </h1>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-          autoFocus
-          className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder:text-slate-600 outline-none transition-colors focus:border-cyan-400/60"
-        />
-
-        {error && (
-          <p className="text-sm text-red-400">Incorrect password. Please try again.</p>
-        )}
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full rounded-full bg-cyan-400 py-3 text-base font-semibold text-black transition-all hover:scale-[1.02] disabled:opacity-60"
-        >
-          {loading ? "Checking..." : "Access Site"}
-        </button>
-      </form>
-    </div>
-  );
-}
-
-export default function AuthPage() {
-  return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-black px-6">
       <div className="mb-10">
         <Image src="/logo.png" alt="3rd-AI" width={140} height={40} style={{ width: "140px", height: "auto" }} />
       </div>
-
-      <Suspense fallback={<div className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-slate-400">Loading...</div>}>
-        <AuthForm />
-      </Suspense>
-
+      <div clas Name="w-full m      <div clas Name="w-full m      <div10 bg      <div clas Name="w-full m      <die="mb-      <div clas Name=ld uppercase      <div clas Name="w-full m             <div clas Name="w-full m      <div c <h1 c      <div clas Name="w-full m      <diext-wh      <div clas Name="w-full m      <div clas N    </h1>
+        <form onSubmit=        <form onSubmit=        <form onSubmit   <        <form o   type="        <form onSubm  value={password}
+                                           targe                                                                 targe        autoFocus
+            className="w-full rounded-xl   rder border-white/10 bg-black/40 px-4 p           it            clasxt-sla            className="nsition- olors focus:bord            className="w-full rounded-xl   rder border-white/10 bg-black/40 pxext-sm text-r            className="w-fulPlease try again.</p>
+          )}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full rounded-full bg-cyan-400 py-3 text-base font-semibold text-black transition-all hover:scale-[1.02] disabled:opacity-60"
+          >
+            {loading ? "Checking..." : "Access Site"}
+          </button>
+        </form>
+      </div>
       <p className="mt-8 text-xs text-slate-600">
         © 2026 3rd-AI Limited · Private Preview
       </p>
