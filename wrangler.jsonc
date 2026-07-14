@@ -1,6 +1,11 @@
 {
+  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "3rd-ai-website",
+  "main": ".open-next/worker.js",
   "compatibility_date": "2026-07-14",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".open-next/assets"
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
 }
