@@ -1,57 +1,42 @@
+import FadeIn from "@/components/ui/FadeIn";
+import AmbientParticles from "@/components/ui/AmbientParticles";
+
 export default function CTA() {
   return (
     <section
       id="company"
-      className="relative overflow-hidden bg-[#020406] py-36"
+      className="relative overflow-hidden bg-[#020406] py-16 md:py-36"
     >
-      {/* Ambient Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.08),transparent_60%)]" />
+      <AmbientParticles />
 
-      <div className="relative mx-auto max-w-5xl px-8 text-center">
-        {/* Section Label */}
-
-        <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-          Let's Build the Future Together
+      <FadeIn className="relative mx-auto max-w-5xl px-8 text-center">
+        <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400 md:text-base">
+          Let&apos;s Build the Future Together
         </p>
 
-        {/* Headline */}
-
-        <h2 className="text-6xl font-semibold leading-tight tracking-tight text-white">
-          Infrastructure has connected the world.
+        <h2 className="text-3xl md:text-6xl font-semibold leading-tight tracking-tight text-white">
+          Infrastructure has connected everything.
           <br />
           <span className="text-cyan-400">
-            It's time it understood it.
+            Now it can finally understand it.
           </span>
         </h2>
 
-        {/* Supporting Text */}
-
-        <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-slate-400">
-          Discover how the Ambient Intelligence Platform enables connected
-          environments to continuously sense, understand, orchestrate, and
-          adapt autonomously.
+        <p className="mx-auto mt-8 max-w-3xl text-lg md:text-xl leading-8 md:leading-9 text-slate-400">
+          See how Ambient Intelligence turns your infrastructure into a
+          system that thinks for itself.
         </p>
 
-        {/* CTA Buttons */}
-
-        <div className="mt-16 flex flex-wrap justify-center gap-6">
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
           <a
-            href="mailto:info@3rd-ai.com"
+            href="#contact"
             className="rounded-full bg-cyan-400 px-10 py-4 text-lg font-semibold text-black transition-all duration-300 hover:scale-105"
           >
             Request a Technical Briefing
           </a>
-
-          <a
-            href="https://www.linkedin.com/company/3rd-ai-com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/15 px-10 py-4 text-lg text-white transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400"
-          >
-            Connect on LinkedIn
-          </a>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
