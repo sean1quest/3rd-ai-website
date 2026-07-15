@@ -7,3 +7,4 @@ cp -r .open-next/middleware .open-next/assets/_worker.js/middleware
 cp -r .open-next/server-functions .open-next/assets/_worker.js/server-functions
 cp -r .open-next/cache .open-next/assets/_worker.js/cache
 cp -r .open-next/dynamodb-provider .open-next/assets/_worker.js/.build
+echo "_worker.js" > .open-next/assets/.assetsignore
