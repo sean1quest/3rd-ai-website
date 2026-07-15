@@ -69,8 +69,8 @@ export default function AboutPage() {
                       edge devices already deployed in homes and buildings around the world
                       — carries enough signal to understand its own environment. And that
                       understanding should translate directly into action, quietly and
-                      continuously, without human intervention, without cloud dependency,
-                      and without changing a single piece of hardware.
+                      continuously, without human intervention and without changing a
+                      single piece of hardware.
                     </p>
                   </div>
                 </div>
@@ -87,8 +87,8 @@ export default function AboutPage() {
                     },
                     {
                       num: "02",
-                      title: "Privacy is non-negotiable",
-                      body: "All inference runs locally on the device. Network traffic data never leaves the device — zero cloud egress, by architecture.",
+                      title: "Privacy is a first-class principle",
+                      body: "Inference runs on-device by default, minimizing what leaves the environment. Cloud or TR-369 connectivity is available when needed — always under your control.",
                     },
                     {
                       num: "03",

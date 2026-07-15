@@ -108,7 +108,7 @@ export default function Architecture() {
                   {layer.badge && (
                     <div className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1">
                       <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-400" />
-                      <span className="text-xs font-medium text-cyan-400">On-Device · Zero Egress</span>
+                      <span className="text-xs font-medium text-cyan-400">On-Device · Cloud or TR-369 Optional</span>
                     </div>
                   )}
                 </div>

@@ -14,7 +14,7 @@ const approach = [
   {
     num: "03",
     title: "On-Device Inference",
-    body: "The Ambient Intelligence Engine runs entirely inside the container — no cloud round-trip. It forecasts the next 24-hour optimization window using a structured behavioral context table, confirming a sleep schedule only when all radio interfaces agree.",
+    body: "The Ambient Intelligence Engine runs on-device by default, with optional cloud or TR-369 connectivity. It forecasts the next 24-hour optimization window using a structured behavioral context table, confirming a sleep schedule only when all radio interfaces agree.",
   },
   {
     num: "04",
@@ -25,11 +25,10 @@ const approach = [
 
 const specs = [
   { label: "Deployment", value: "OCI container · zero hardware changes" },
-  { label: "Inference", value: "On-device · zero cloud egress" },
-  { label: "Telemetry", value: "Per-band · per-minute · MQTT" },
-  { label: "Threshold", value: "KMeans adaptive · per radio interface" },
-  { label: "Privacy", value: "No data leaves the device" },
-  { label: "Standards", value: "Open · vendor-agnostic" },
+  { label: "Inference", value: "On-device, plus cloud or TR-369" },
+  { label: "Telemetry", value: "Continuous, real-time monitoring" },
+  { label: "Threshold", value: "Adaptive, tunes itself over time" },
+  { label: "Standards", value: "Open, vendor- and chipset-agnostic" },
 ];
 
 export default function Platform() {
@@ -58,7 +57,7 @@ export default function Platform() {
             Most access points run all radios at full power, around the clock —
             regardless of whether anyone is using them. 3rd-AI learns real
             household usage patterns and autonomously powers down idle radios
-            during confirmed quiet windows. No schedules. No rules. No cloud.
+            during confirmed quiet windows. No schedules. No rules.
           </p>
         </FadeIn>
 
