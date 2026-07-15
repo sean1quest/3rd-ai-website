@@ -37,3 +37,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 115s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-left {
+    animation: none;
+  }
+}

@@ -19,16 +19,27 @@ export default function CTA() {
           Infrastructure has connected everything.
           <br />
           <span className="text-cyan-400">
-            Now it can finally understand it.
+            Now it can finally understand itself — and build a better future.
           </span>
         </h2>
 
         <p className="mx-auto mt-8 max-w-3xl text-lg md:text-xl leading-8 md:leading-9 text-slate-400">
           See how Ambient Intelligence turns your infrastructure into a
-          system that thinks for itself.
+          system that thinks for itself — cutting energy waste along the
+          way, without touching a single piece of hardware.
+        </p>
+
+        <p className="mt-6 text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
+          16% average power reduction · 1,520 tCO₂e avoided annually
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-6">
+          <a
+            href="#platform"
+            className="rounded-full border border-white/15 px-10 py-4 text-lg text-white transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400"
+          >
+            Explore the Platform
+          </a>
           <a
             href="#contact"
             className="rounded-full bg-cyan-400 px-10 py-4 text-lg font-semibold text-black transition-all duration-300 hover:scale-105"

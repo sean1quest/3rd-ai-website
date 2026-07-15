@@ -4,22 +4,22 @@ const approach = [
   {
     num: "01",
     title: "Behavioral Traffic Analysis",
-    body: "3rd-AI ingests per-band telemetry from the access point — every client, every minute. A KMeans clustering algorithm identifies IDLE vs ACTIVE traffic boundaries, self-calibrating thresholds per radio interface based on real household usage patterns.",
+    body: "3rd-AI continuously analyzes traffic patterns across every connected client, distinguishing genuine idle periods from active use — automatically, without manual thresholds or configuration.",
   },
   {
     num: "02",
     title: "Coverage Fidelity Gating",
-    body: "Before acting, the platform validates telemetry coverage per hourly window. Hours below 65% fidelity are flagged as SPARSE SIGNAL — the agent abstains rather than misread a data gap as genuine inactivity. Conservative by design.",
+    body: "Before acting, the platform checks signal quality and data completeness. If coverage is too sparse to trust, it waits rather than risk mistaking a gap in data for real inactivity. Conservative by design.",
   },
   {
     num: "03",
     title: "On-Device Inference",
-    body: "The Ambient Intelligence Engine runs on-device by default, with optional cloud or TR-369 connectivity. It forecasts the next 24-hour optimization window using a structured behavioral context table, confirming a sleep schedule only when all radio interfaces agree.",
+    body: "The Ambient Intelligence Engine actuates on-device actions, with cloud or TR-369 connectivity when needed. It predicts the best time to act, and only moves forward when it's confident the timing is right.",
   },
   {
     num: "04",
     title: "Autonomous Radio Management",
-    body: "Once confirmed, the platform delivers action payloads directly to the AP power-control API. High-band radios (5 GHz, 6 GHz) enter sleep state. Clients are steered to the 2.4 GHz anchor. Full audit trail written to local storage.",
+    body: "Once confirmed, the platform acts directly on the infrastructure — automatically optimizing the device for peak efficiency. Every action is logged for a full audit trail.",
   },
 ];
 
@@ -48,8 +48,11 @@ export default function Platform() {
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400 md:text-base">
             Platform
           </p>
+          <p className="mb-3 text-sm font-medium text-slate-500">
+            Example Use Case — Wi-Fi AP Power Optimization
+          </p>
           <h2 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-white">
-            Wi-Fi Power Optimization
+            Autonomous Power Intelligence
             <br />
             <span className="text-cyan-400">Driven by Behavior.</span>
           </h2>
