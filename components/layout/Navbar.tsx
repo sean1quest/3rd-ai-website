@@ -27,7 +27,7 @@ export default function Navbar() {
               width={140}
               height={36}
               priority
-              style={{ width: "clamp(140px, 14vw, 170px)", height: "auto" }}
+              style={{ width: "clamp(130px, 13vw, 160px)", height: "auto" }}
             />
           </a>
 

@@ -1,5 +1,4 @@
 import FadeIn from "@/components/ui/FadeIn";
-import Image from "next/image";
 
 const layers = [
   {
@@ -44,18 +43,6 @@ export default function Architecture() {
       {/* Ambient glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,217,255,0.05),transparent_65%)]" />
 
-
-      {/* Platform banner — bottom strip */}
-      <div className="absolute inset-x-0 -bottom-16 h-56 overflow-hidden">
-        <Image
-          src="/images/platform-banner.png"
-          alt=""
-          fill
-          className="object-cover opacity-50"
-          aria-hidden="true"
-        />
-        <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black to-transparent" />
-      </div>
       <div className="relative mx-auto max-w-7xl px-8">
 
         {/* Header */}

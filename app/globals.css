@@ -48,7 +48,7 @@ body {
 }
 
 .animate-scroll-left {
-  animation: scroll-left 115s linear infinite;
+  animation: scroll-left 64s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

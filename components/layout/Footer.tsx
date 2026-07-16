@@ -2,8 +2,21 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#05070A] py-12">
-      <div className="mx-auto max-w-7xl px-8">
+    <footer className="relative overflow-hidden border-t border-white/5 bg-[#05070A] py-12">
+
+      {/* Platform banner — top strip */}
+      <div className="absolute inset-x-0 top-0 h-56 overflow-hidden">
+        <Image
+          src="/images/platform-banner.png"
+          alt=""
+          fill
+          className="object-cover opacity-50"
+          aria-hidden="true"
+        />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#05070A] to-transparent" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-8">
 
         {/* Top row — logo + nav */}
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
@@ -25,18 +38,18 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <nav className="flex flex-wrap gap-x-10 gap-y-3 text-sm text-slate-500">
-            <a href="/#architecture" className="transition-colors hover:text-slate-300">Architecture</a>
-            <a href="/#platform" className="transition-colors hover:text-slate-300">Platform</a>
-            <a href="/#validation" className="transition-colors hover:text-slate-300">Validation</a>
-            <a href="/#contact" className="transition-colors hover:text-slate-300">Contact</a>
-            <a href="/about" className="transition-colors hover:text-slate-300">About</a>
-            <a href="/privacy" className="transition-colors hover:text-slate-300">Privacy Policy</a>
+          <nav className="flex flex-wrap gap-x-10 gap-y-3 text-sm text-cyan-400">
+            <a href="/#architecture" className="transition-colors hover:text-cyan-300">Architecture</a>
+            <a href="/#platform" className="transition-colors hover:text-cyan-300">Platform</a>
+            <a href="/#validation" className="transition-colors hover:text-cyan-300">Validation</a>
+            <a href="/#contact" className="transition-colors hover:text-cyan-300">Contact</a>
+            <a href="/about" className="transition-colors hover:text-cyan-300">About</a>
+            <a href="/privacy" className="transition-colors hover:text-cyan-300">Privacy Policy</a>
             <a
               href="https://www.linkedin.com/company/3rd-ai.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-slate-300"
+              className="transition-colors hover:text-cyan-300"
             >
               LinkedIn
             </a>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import FadeIn from "@/components/ui/FadeIn";
 
 export default function Hero() {
@@ -8,42 +7,26 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-black pt-32 pb-24 md:pt-44 md:pb-36">
 
       {/* ── Full-bleed background ──────────────────────────────────
-          Static telemetry bar-chart image (exact recreation of the
-          Architecture section's spectrum graphic, recolored to cyan),
-          positioned bottom-anchored like the source. Other options
+          Original stock waveform video, cyan color. Other options
           tried, in case we want to switch back:
-          - Original waveform video:
-            <video autoPlay loop muted playsInline className="h-full w-full object-cover">
-              <source src="/videos/hero-ambient-wave-16x9.mp4" type="video/mp4" />
-            </video>
+          - Telemetry bar-chart marquee (public/images/hero-telemetry-bars.png):
+            <div className="absolute inset-x-0 bottom-20 md:bottom-28 h-40 md:h-56 overflow-hidden">
+              <div className="animate-scroll-left flex h-full w-max items-end">...</div>
+            </div>
           - Signal-ring pulse (components/ui/SignalPulse.tsx): <SignalPulse />
           - Animated canvas version (components/ui/TelemetryBars.tsx): <TelemetryBars />
       */}
       <div className="absolute inset-0">
-        <div className="absolute inset-x-0 bottom-20 md:bottom-28 h-40 md:h-56 overflow-hidden">
-          <div className="animate-scroll-left flex h-full w-max items-end">
-            {[0, 1].map((i) => (
-              <div key={i} className="flex h-full flex-shrink-0 items-end">
-                <Image
-                  src="/images/hero-telemetry-bars.png"
-                  alt=""
-                  width={4752}
-                  height={294}
-                  className="h-full w-auto flex-shrink-0"
-                  style={{
-                    WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, black 0.7%, black 99.3%, transparent 100%)",
-                    maskImage:
-                      "linear-gradient(to right, transparent 0%, black 0.7%, black 99.3%, transparent 100%)",
-                  }}
-                  aria-hidden="true"
-                  priority={i === 0}
-                  loading={i === 0 ? "eager" : undefined}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero-ambient-wave-16x9.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />
       </div>
