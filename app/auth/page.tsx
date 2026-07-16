@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function AuthPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -22,8 +20,12 @@ export default function AuthPage() {
     });
 
     if (res.ok) {
-      router.push("/");
-      router.refresh();
+      // Hard navigation instead of router.push — guarantees the
+      // just-set auth cookie is attached to the next request. The
+      // client-side (soft) navigation Next.js normally does can race
+      // the cookie write on some mobile browsers, bouncing back to
+      // /auth with the field wiped.
+      window.location.href = "/";
     } else {
       setError(true);
       setLoading(false);
